@@ -1,26 +1,26 @@
-# Zombie Microservices Workshop: Lab Guide
+# Zombie Microservices Workshop: 실습 가이드
 
-## All Labs must be performed in us-west-2 (Oregon)
+## 실습 과정은 us-west-2 (Oregon) 리전을 활용합니다. 
 
-## Overview
-This workshop has several lab exercises that you can complete to extend the functionality of the base chat app that is provided when you launch the CloudFormation template provided. Each of these labs is an independent section and you may choose to do some or all of them.
-*   **Typing Indicator**  
-    This exercise already has the UI and backend implemented, and focuses on how to setup the API Gateway to provide a RESTful endpoint.
-*   **SMS Integration with Twilio**  
-    This exercise wires together Twilio to an existing API Gateway stack. It shows how you can leverage templates in API Gateway to transform form posted data into JSON format for the backend lambda function.
-*   **Search over the chat messages**  
-    This exercise adds an Elasticsearch cluster, which is used to index chat messages streamed from a DynamoDB table.
-*   **Slack Integration**  
-    This exercise integrates Slack into the chat application to send messages from Slack.
-*   **Intel Edison Zombie Motion Sensor**  
-    This exercise integrates motion sensor detection of zombies to the chat system using an Intel Edison board and a Grove PIR Motion Sensor.
-*   **Workshop Cleanup**  
-    This section points out some instructions to tear down your environment when you're done working on the labs. 
+## 개요 
+본 워크샵은 몇 개의 실습 코스로 이루어져 있으며, AWS CloudFromation 템플릿으로 구성하여 채팅 앱의 다양한 기능을 확장할 수 있습니다. 각 실습 코스는 독립적으로 구성되어 있기 때문에 골라서 하거나, 전부 다 하실 수도 있습니다. 
+*   **채팅 구현**  
+    본 실습은 이미 UI 및 백엔드가 구성되어 있고 어떻게 API Gateway를 실습하고 RESTful 엔드 포인트를 제공하는지에 초점을 맞추고 있습니다. 
+*   **SMS 연동**  
+    본 실습은 Twilio를 통해 기존 API Gateway 스택과 연결합니다. API Gateway로 JSON 포맷으로 받은 POST 데이터를 어떻게 AWS Lambda 함수로 연결하는지 알 수 있습니다.  
+*   **채팅 메시지 검색**  
+    Elasticsearch 클러스터를 이용하여 채팅 메시지를 DynamoDB 테이블에 저장하고 인덱싱을 합니다.  
+*   **Slack 연동**  
+    Slack과 채팅 앱을 연동하여 메시지를 교환합니다. 
+*   **Intel Edison 좀비 모션 센서**  
+    인텔 에디슨 보드와 Grove PIR 모션 세션서를 통해 좀비를 감지하는 부분을 통합합니다.
+*   **실습 종료**  
+    실습에 사용했던 환경을 한꺼번에 삭제하는 부분입니다. 
 
 * * *
 
-### Let's Begin! Launch the CloudFormation Stack
-1\. To begin this workshop, click the 'Deploy to AWS' button below. 
+### CloudFormation 스택 실행하기
+1\. 워크샵을 진행하기 전에  'Deploy to AWS' 버튼을 누릅니다.
 
 [![Launch Zombie Workshop Stack into Oregon with CloudFormation](/Images/deploy-to-aws.png)](https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=ZombieWorkshopStack&templateURL=https://s3-us-west-2.amazonaws.com/reinvent-wrk305-2015/CreateZombieWorkshop.json)
 
